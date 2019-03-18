@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Restaurant} from '../../models/restaurant';
 
 @Component({
@@ -8,21 +8,9 @@ import {Restaurant} from '../../models/restaurant';
 })
 export class RestCardComponent implements OnInit {
   @Input() restaurant: Restaurant;
-  now = new Date();
 
-  constructor() {
-    //this.restaurant = new Restaurant();
+  constructor() {}
 
-  }
-
-  ngOnInit() {
-    /*
-    this.restaurant.name = 'TAV Cafe';
-    this.restaurant.phone = '514 12315646';
-    this.restaurant.priceRange = 1;
-    this.restaurant.rating = 5;
-    this.restaurant.website = 'http://www.cafetav.com';
-  */
-  }
+  ngOnInit() {}
 
 }
