@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Restaurant} from '../restaurant';
 import {Observable, of} from 'rxjs';
 import {Address} from '../address';
+import {Review} from '../review';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,17 @@ export class RestaurantService {
           city : 'Montreal',
           province : 'QC',
           country : 'Canada'
-        })
+        }),
+        reviews : new Review ([{
+         author: 1,
+         body: 'liked it'
+        },
+          {
+         author: 2,
+         body: 'dont like it'
+          }
+        ]),
+
       }),
 
       new Restaurant({
@@ -43,6 +54,10 @@ export class RestaurantService {
           city : '',
           province : 'QC',
           country : 'Canada'
+        }),
+        reviews : new Review ({
+          author: 1,
+          body: 'liked it'
         })
       }),
 
@@ -59,6 +74,10 @@ export class RestaurantService {
           city : 'Montreal',
           province : 'QC',
           country : 'Canada'
+        }),
+        reviews : new Review ({
+          author: 1,
+          body: 'liked it'
         })
       }),
 
