@@ -1,11 +1,21 @@
 export class Address {
-  // region Attributes
+
   streetNumber: number;
   apartment: string;
   streetName: string;
   city: string;
   province: string;
-  postalCode: string;
   country: string;
-  // endregion
+
+  constructor(args?) {
+
+    this.streetNumber = args.streetNumber;
+    this.streetName = args.streetName;
+    this.city = args.city;
+    this.province = args.province;
+    this.country = args.country;
+
+
+  }
+
 }

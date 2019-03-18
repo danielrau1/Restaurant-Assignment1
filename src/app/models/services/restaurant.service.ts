@@ -1,54 +1,80 @@
 import { Injectable } from '@angular/core';
-import { Restaurant } from '../restaurant';
+import { Restaurant} from '../restaurant';
 import {Observable, of} from 'rxjs';
+import {Address} from '../address';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantService {
+
   restaurants: Restaurant[];
+
   constructor() {
-    // TODO: Replace with API call
+
+
     this.restaurants = [
       new Restaurant({
-        name: 'Mottel\'s Kitchen',
-        phone: '(514) 555-2019',
-        website: 'https://www.teamviral.com',
-        rating: 5,
-        avgMealPrice: 20
+        name : 'Pizza Pita',
+        website : 'http://www.pizzapita.com',
+        phone : '(514)-731-7482',
+        rating : 5,
+        avgMealPrice : 3,
+        location: new Address({
+          streetNumber : '7489',
+          streetName : 'Decarie blvd',
+          apartment : '',
+          city : 'Montreal',
+          province : 'QC',
+          country : 'Canada'
+        })
       }),
+
       new Restaurant({
-        name: 'Tav Cafe',
-        phone: '(514) 112-3581',
-        website: 'http://cafetav.com/',
-        rating: 3,
-        avgMealPrice: 15
+        name : 'Tav Cafe',
+        website : '',
+        phone : '(718)-854-45122',
+        rating : 6,
+        avgMealPrice : 3,
+        location: new Address({
+          streetNumber : '5748',
+          streetName : 'Decarie Blvd',
+          apartment : '',
+          city : '',
+          province : 'QC',
+          country : 'Canada'
+        })
       }),
+
       new Restaurant({
-        name: 'Pizza Pita',
-        phone: '(514) 234-1111',
-        rating: 4,
-        avgMealPrice: 18
+        name : 'Chez Benny',
+        website : 'https://www.benny-co.com/',
+        phone : '(514)-731-7482',
+        rating : 2,
+        avgMealPrice : 3,
+        location: new Address({
+          streetNumber : '5071 Queen Mary Rd',
+          streetName : 'Queen Mary Rd',
+          apartment : '',
+          city : 'Montreal',
+          province : 'QC',
+          country : 'Canada'
+        })
       }),
-      new Restaurant({
-        name: 'Chops',
-        website: 'https://www.teamviral.com',
-        rating: 5,
-        avgMealPrice: 40
-      }),
-      new Restaurant({
-        name: 'Yakimono',
-        phone: '(718) 781-0990',
-        website: 'https://www.google.com',
-        rating: 5,
-        avgMealPrice: 50
-      })
+
     ];
+
+
+
   }
 
-  // region Getters
   getRestaurants(): Observable<Restaurant[]> {
+
     return of(this.restaurants);
+
   }
-  // endregion
+
+
+
 }
+
