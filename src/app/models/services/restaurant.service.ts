@@ -29,10 +29,15 @@ export class RestaurantService {
           province : '',
           country : 'Canada'
         }),
-        reviews : new Review ([{author: 4, body: 'liked it 3'},
-          {author: 4, body: 'liked it 4'}
-]
-          )
+
+        reviews : [
+          new Review ({author: 3, body: 'i like 3'}),
+            new Review ({author: 33, body: 'i like 33'})
+        ]
+
+
+         // reviews : [ new Review ({author: 3, body: 'i like 3'}), new Review ({author: 55, body: 'i like 55'})]
+
 
       }),
 
@@ -50,10 +55,10 @@ export class RestaurantService {
           province : 'QC',
           country : 'Canada'
         }),
-        reviews : new Review ({
+        reviews : [ new Review ({
           author: 1,
           body: 'liked it 1'
-        })
+        })]
       }),
 
       new Restaurant({
@@ -70,10 +75,10 @@ export class RestaurantService {
           province : 'QC',
           country : 'Canada'
         }),
-        reviews : new Review ({
+        reviews :[ new Review ({
           author: 2,
           body: 'liked it 2'
-        })
+        })]
       }),
 
     ];

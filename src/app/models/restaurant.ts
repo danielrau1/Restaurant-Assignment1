@@ -20,17 +20,11 @@ export class Restaurant {
     this.phone = args.phone;
     this.rating = args.rating;
     this.avgMealPrice = args.avgMealPrice;
+
     // For the location which is an "inner class"
-    this.location = new Address({});
-    this.location.streetNumber = args.location.streetNumber;
-    this.location.streetName = args.location.streetName;
-    this.location.apartment = args.location.apartment;
-    this.location.city = args.location.city;
-    this.location.province = args.location.province;
-    this.location.country = args.location.country;
+    this.location = args.location;
     // For the Review
-    this.reviews = new Review ( {});
-    this.reviews.author = args.reviews.author;
-    this.reviews.body = args.reviews.body;
+    this.reviews = args.reviews;
+
   }
 }

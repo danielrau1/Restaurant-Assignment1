@@ -22,10 +22,14 @@
     <p *ngIf="restaurant.reviews.author">Author: {{restaurant.reviews.author}}</p>
     <p *ngIf="restaurant.reviews.body">Message: {{restaurant.reviews.body}}</p>
 
-  <div *ngFor="let review of reviews">
+
+
+
+  <div *ngFor="let review of restaurant.reviews">
     <p>{{review.author}}</p>
     <p>{{review.body}}</p>
   </div>
+
 
 </mat-card>
 
