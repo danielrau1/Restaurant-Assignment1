@@ -2,9 +2,9 @@ export class Review {
   // region Attributes
   author: number;
 
-  title: string;
+ // title: string;
   body: string;
-  date: Date;
+  // date: Date;
   // endregion
 
   constructor(args?) {

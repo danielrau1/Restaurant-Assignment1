@@ -29,7 +29,7 @@ export class Restaurant {
     this.location.province = args.location.province;
     this.location.country = args.location.country;
     // For the Review
-    this.reviews = new Review ([ {}]);
+    this.reviews = new Review ( {});
     this.reviews.author = args.reviews.author;
     this.reviews.body = args.reviews.body;
   }

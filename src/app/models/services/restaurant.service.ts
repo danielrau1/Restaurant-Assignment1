@@ -26,18 +26,13 @@ export class RestaurantService {
           streetName : 'Decarie blvd',
           apartment : '',
           city : 'Montreal',
-          province : 'QC',
+          province : '',
           country : 'Canada'
         }),
-        reviews : new Review ([{
-         author: 1,
-         body: 'liked it'
-        },
-          {
-         author: 2,
-         body: 'dont like it'
-          }
-        ]),
+        reviews : new Review ([{author: 4, body: 'liked it 3'},
+          {author: 4, body: 'liked it 4'}
+]
+          )
 
       }),
 
@@ -57,7 +52,7 @@ export class RestaurantService {
         }),
         reviews : new Review ({
           author: 1,
-          body: 'liked it'
+          body: 'liked it 1'
         })
       }),
 
@@ -76,8 +71,8 @@ export class RestaurantService {
           country : 'Canada'
         }),
         reviews : new Review ({
-          author: 1,
-          body: 'liked it'
+          author: 2,
+          body: 'liked it 2'
         })
       }),
 
@@ -96,4 +91,3 @@ export class RestaurantService {
 
 
 }
-

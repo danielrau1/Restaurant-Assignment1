@@ -14,14 +14,18 @@
     <p *ngIf="restaurant.location.streetName">Street Name: {{restaurant.location.streetName}}</p>
     <p *ngIf="restaurant.location.city">City: {{restaurant.location.city}}</p>
     <p *ngIf="restaurant.location.province">Province: {{restaurant.location.province}}</p>
-    <p *ngIf="restaurant.reviews.author">Author: {{restaurant.reviews.author}}</p>
-    <p *ngIf="restaurant.reviews.body">Message: {{restaurant.reviews.body}}</p>
+
   </mat-card-content>
 
-  <u><mat-card-title>Reviews</mat-card-title></u>
+  <u><mat-card-title >Reviews</mat-card-title></u>
 
     <p *ngIf="restaurant.reviews.author">Author: {{restaurant.reviews.author}}</p>
     <p *ngIf="restaurant.reviews.body">Message: {{restaurant.reviews.body}}</p>
+
+  <div *ngFor="let review of reviews">
+    <p>{{review.author}}</p>
+    <p>{{review.body}}</p>
+  </div>
 
 </mat-card>
 

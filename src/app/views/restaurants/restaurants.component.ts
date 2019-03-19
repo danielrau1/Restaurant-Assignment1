@@ -9,6 +9,22 @@ import {RestaurantService} from '../../models/services/restaurant.service';
 })
 export class RestaurantsComponent implements OnInit {
   rests: Restaurant[];
+
+  /***********************   R&D  **************************/
+  title = 'The Heroes Table';
+   heroes = [
+    {id: 1, name: 'Superman'},
+    {id: 2, name: 'Batman'},
+    {id: 5, name: 'BatGirl'},
+    {id: 3, name: 'Robin'},
+    {id: 4, name: 'Flash'}
+  ];
+
+
+
+
+   /*********************************************************/
+
   constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit() {
